@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droods Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="titleBox">
+    <h1>Mystery of the Droods</h1>
+    <hr>
+    <h2>The Dice Game</h2>
+    </div>
+    <div class="game">
+        <div class="acts">
+        <p id="action"></p>
+        <p id="outcome"></p>
+        </div>
+        <p id="droodScore">Droods: </p>
+        <p id="scissorScore">Scissors: </p>
+        <p id="pitzaScore">Pitza: </p>
+        <p id="pitzaTabPrice"></p>
+        <button type="button" onclick="play()">Roll the Dice</button>
+        <button type="button" onclick="payYourTab()">Pay your Tab</button>
+        <button type="button" onclick="reset()">Restart</button>
+    </div>
+    <div class="rules">
+        <h2>Setting</h2>
+        <ul>
+        <li>You are Brent Halligan, a Scotland Yard detective tasked with solving the case of the mysterious "Skeleton Murders" in London.</li>
+        <li>In order to win you must gather your wits (scissors), keep your vices (pitza) in check, and foil the nefarious organization (droods) set on world domination!</li>
+        </ul>
+        <h2>Rules</h2>
+        <ul>
+        <li>If your <b>Droods</b> score reaches 10 you fail to protect the world and instead rule it alongside Lord Sinclair as one of his order. Melanie wouldn be upset if she were still alive.</li>
+        <li>If your <b>Pitza</b> score reaches 10 you busy yourself with other matters, like darts, pitzas, and aliens. The world keeps turning until you are obliterated by a Drood drone strike.</le>
+        <li>If your <b>Scissors</b> score reaches 10 you succeed in foiling the Droods evil plans and go on to live a fulfilling life with Melanie. Take that, Lowry</le>
+        </ul>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

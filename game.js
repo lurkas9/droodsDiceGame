@@ -93,7 +93,7 @@ function play(){
             scissors += 1;
         }
     }else{
-        action = "You eat a pitza and smoke a carton of cigars."
+        action = "You don't feel like working. So you eat a pitza and smoke a carton of cigarettes."
         outcome = "Your pitza tab grows."
         pitzaTab++;
     }

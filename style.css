@@ -1,57 +1,71 @@
-@font-face{
+@font-face {
     font-family: "Caslon-Antique";
     src: url(fonts/CaslonAntique.ttf) format(truetype);
 }
-/* * {
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    margin: 10px;
-} */
 
-body{
+* {
+    border-radius: 5px;
+}
+
+body {
     font-family: "Caslon-Antique";
     background-image: url(https://static.wikitide.net/windowswallpaperwiki/1/1e/Stonehenge.jpg), url(img/shg.jpg);
     background-position: center;
     background-size: cover;
+    /* width: 600px;
+    height: 800px;
+    margin: auto; */
 }
 
-h1, h2{
+h1,
+h2 {
     text-align: center;
 }
 
-.titles{
+.titles {
     border: 2px solid black;
 }
 
-.game{
+.rules {
+    background-color: #117c1370;
+    border: 2px solid black;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.titleBox {
+    box-sizing: border-box;
+    border: 3px solid black;
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #117c1370;
+    margin-top: 10px;
+    backdrop-filter: blur(5px);
+}
+
+hr {
+    color: green;
+}
+
+.game {
     background-color: #117c1390;
     width: inherit;
     margin: auto;
     text-align: center;
     margin-bottom: 5px;
     margin-top: 10px;
-    width: 30%;
     padding: 5px;
-    border-radius: 5px;
     border: 2px solid black;
     backdrop-filter: blur(5px);
+    width: 100%;
 }
 
-.titleBox{
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: auto;
-    width: fit-content;
-    padding: 20px;
-    background-color: #117c1370;
-    margin-top: 10px;
-    backdrop-filter: blur(5px);
-}
-hr{
-    color: black;
-}
-.game p{
+.game p {
     font-weight: bold;
     background-color: green;
     width: fit-content;
@@ -59,45 +73,61 @@ hr{
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
-    border-radius: 5px;
     border: 1px solid black;
 }
 
-.acts{
-    margin: auto;
-    border-radius: 5px;
-    height: 5.5lh;
+div.scores,
+div.acts,
+div.effects {
+    display: inline-block;
+    vertical-align: top;
 }
 
-.acts p{
+.acts {
+    width: 30%;
+}
+
+.acts p {
     border: none;
     background: none;
 }
 
-.rules{
-    background-color: #117c1370;
-    border: 2px solid black;
-    border-radius: 5px;
-    width: fit-content;
-    margin: auto;
-    padding: 5px;
-    backdrop-filter: blur(5px);
+.scores {
+    width: 30%;
 }
 
-.rules p, li{
+.effects {
+    width: 30%;
+    background-image: "";
+    height: 165px;
+    padding-top: 0px;
+}
+
+.rules p,
+li {
     margin: 0px;
     font-weight: bold;
     padding-right: 20px;
 }
 
-@media only screen and (max-width: 600px){
-	.game{
-		background-color: #117c1370;
-    border: 2px solid black;
-    border-radius: 5px
-    margin: auto;
-    padding: 5px;
-    backdrop-filter: blur(5px);
-    width:100%;
-	}
+button {
+    background: green;
+    border: 1px solid black;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: darkgreen;
+    padding: 3px;
+    border: 1px dotted black;
+}
+
+.effects p {
+    height: 5lh;
+    width: 100%;
+}
+
+img {
+    max-width: 60%;
 }

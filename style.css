@@ -5,6 +5,14 @@
 
 * {
     border-radius: 5px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 body {
@@ -81,6 +89,8 @@ div.acts,
 div.effects {
     display: inline-block;
     vertical-align: top;
+    /* height: 10lh;
+    padding-top: 10px; */
 }
 
 .acts {
@@ -97,7 +107,7 @@ div.effects {
 }
 
 .effects {
-    width: 30%;
+    width: 35%;
     background-image: "";
     height: 165px;
     padding-top: 0px;
@@ -130,4 +140,30 @@ button:hover {
 
 img {
     max-width: 60%;
+}
+
+.gameBody {
+    width: 50%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .gameBody {
+        width: 90%;
+    }
+
+    div.scores,
+    div.acts,
+    div.effects {
+        display: block;
+        width: 100%;
+        height: 9lh;
+    }
+    div.acts{
+        height: 5lh;
+    }
+    div.scores{
+        padding-top: 2lh;
+        margin-bottom: 1lh;
+    }
 }

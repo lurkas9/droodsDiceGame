@@ -6,13 +6,13 @@ let action = "";
 let outcome = "";
 
 let outcomeImage = document.createElement("img");
-outcomeImage.src = "img/lowry_lowres.gif";
+outcomeImage = "";
 
 document.getElementById("action").innerText = "You investigate " + action;
 document.getElementById("outcome").innerText = "Outcome: " + outcome;
 document.getElementById("droodScore").innerText = "Droods: " + droods;
 document.getElementById("scissorScore").innerText = "Scissors: " + scissors;
-document.getElementById("pitzaScore").innerText = "Pitza:\n" + pitza;
+document.getElementById("pitzaScore").innerText = "Pitza: " + pitza;
 document.getElementById("pitzaTabPrice").innerHTML = "Your pitza tab is currently: " + pitzaTab + " £";
 
 function payYourTab() {
@@ -45,54 +45,65 @@ function play() {
         if (dice2 == 0) {
             outcome = "You spend the whole day playing darts and reading about aliens. \n+1 PITZA";
             pitza += 1;
+            outcomeImage = "img/darts.gif";
         } else if (dice2 == 1) {
             outcome = "Lowry asserted his dominance over you again. \n-1 SCISSORS";
             scissors -= 1;
+            outcomeImage = "img/lowry_lowres.gif";
         } else if (dice2 == 2) {
             outcome = "You drank ethanol and now the room is spinning. \n+1 SCISSORS -1 PITZA";
             scissors += 1;
             pitza -= 1;
+            outcomeImage = "";
         } else if (dice2 == 3) {
             outcome = "The chief called you into his office. \n-1 PITZA +1 DROODS";
             pitza -= 1;
             droods += 1;
+            outcomeImage = "";
         } else if (dice2 == 4) {
             outcome = "You managed to trick Lowry into leaving his scissors unattended. \n+1 SCISSORS";
             scissors += 1;
+            outcomeImage = "";
         } else if (dice2 == 5) {
             outcome = "Someone left a threatening message on your answering machine. \n+1 DROODS";
             droods += 1;
+            outcomeImage = "";
         }
     } else if (dice1 == 1) {
-
-
         action = "the Field";
         if (dice2 == 0) {
             outcome = "You poisoned a homeless man and stole his money. \n+1 SCISSORS";
             scissors += 1;
+            outcomeImage = "";
         } else if (dice2 == 1) {
             outcome = "Mr. Blakee shared deep lore on the droods with you. \n-1 PITZA +1 SCISSORS";
             scissors += 1;
             pitza -= 1;
+            outcomeImage = "";
         } else if (dice2 == 2) {
             outcome = "You've been invited to dine with Lord Sinclair. \n+1 PITZA +2 DROODS";
             droods += 2;
             pitza += 1;
+            outcomeImage = "";
         } else if (dice2 == 3) {
             outcome = "You asked Melanie a personal question. \n-1 DROODS";
             droods -= 1;
+            outcomeImage = "";
         } else if (dice2 == 4) {
             outcome = "You sold the stolen Enhanced Fiberglass Telescope Ultraling 47 fishing rod worth 800 francs. \n+2 PITZA";
             pitza += 2;
+            outcomeImage = "";
         } else if (dice2 == 5) {
             outcome = "You went to the past through the Gate of the Worlds. \n+1 SCISSORS +1 DROODS";
             droods += 1;
             scissors += 1;
+            outcomeImage = "";
         }
     } else {
         action = "You don't feel like working. So you eat a pitza and smoke a carton of cigarettes."
         outcome = "Your pitza tab grows."
         pitzaTab++;
+        outcomeImage = "";
     }
 
     validity();
@@ -121,7 +132,7 @@ function update() {
     document.getElementById("outcome").innerText = "Outcome: " + outcome;
     document.getElementById("pitzaTabPrice").innerText = "Your pitza tab is currently: " + pitzaTab + " £";
 
-    document.getElementById("effects").src = "img/lowry_lowres.gif";
+    document.getElementById("effects").src = outcomeImage;
 }
 
 function ending() {
@@ -131,6 +142,7 @@ function ending() {
             if (dice3 == 1)
                 scissors--;
         } else {
+            document.body.style.backgroundImage = "url(img/halligan_victory.png";
             alert("Congratulations");
         }
     } else
